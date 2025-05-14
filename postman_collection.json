@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "c5bfcd5d-1a35-4456-8866-9abed83fe0c9",
+		"name": "GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15367574"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    all{\r\n      id, name\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5163/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5163",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n    createCategoria(id: \"1\", name: \"Teste\"){\r\n    name\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5163/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5163",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
